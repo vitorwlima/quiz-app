@@ -3,7 +3,7 @@ import { Container, InputWrapper } from './styles'
 
 import { Button, Input, Select } from '../../components'
 
-const Home = () => {
+export const Home = () => {
   const [questionsNumber, setQuestionsNumber] = useState(10)
   const [selectedCategory, setSelectedCategory] = useState('any')
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
@@ -67,5 +67,3 @@ const Home = () => {
     </Container>
   )
 }
-
-export default Home
