@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, InputWrapper } from './styles'
 
-import { Input, Select } from '../../components'
+import { Button, Input, Select } from '../../components'
 
 const Home = () => {
   const [questionsNumber, setQuestionsNumber] = useState(10)
@@ -34,6 +34,8 @@ const Home = () => {
     },
   ]
 
+  const handleStartQuiz = () => {}
+
   return (
     <Container>
       <h1>Set up your quiz!</h1>
@@ -60,6 +62,7 @@ const Home = () => {
           label='Select a difficulty:'
           onChange={e => setSelectedDifficulty(e.target.value)}
         />
+        <Button onClick={handleStartQuiz}>Start quiz</Button>
       </InputWrapper>
     </Container>
   )
