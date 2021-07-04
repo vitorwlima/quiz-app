@@ -9,6 +9,7 @@ export const Container = styled.div`
     background-color: #209ff3;
     color: #eee;
     cursor: pointer;
+    transition: 0.3s;
 
     &:hover {
       background-color: ${shade(0.2, '#209ff3')};

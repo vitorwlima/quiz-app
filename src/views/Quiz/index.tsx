@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
-import { IQuestions } from '../../interfaces/IQuestions'
-import { IAnswers } from '../../interfaces/IAnswers'
+import { IAnswers, IQuestions } from '../../interfaces'
 import api from '../../services/api'
 
 import {
@@ -21,6 +20,7 @@ interface IParams {
 export const Quiz = () => {
   const { amount, category, difficulty }: IParams = useParams()
   const history = useHistory()
+  const he = require('he')
 
   const [questions, setQuestions] = useState<IQuestions[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -101,7 +101,7 @@ export const Quiz = () => {
           key={q.question}
           isCurrentQuestion={index === currentQuestion}
         >
-          <h2>{q.question}</h2>
+          <h2>{he.decode(q.question)}</h2>
           <AlternativesContainer>
             {answers &&
               answers[index] &&
@@ -116,7 +116,7 @@ export const Quiz = () => {
                     !answer.isCorrect
                   }
                 >
-                  {answer.alternative}
+                  {he.decode(answer.alternative)}
                 </AlternativeCard>
               ))}
           </AlternativesContainer>

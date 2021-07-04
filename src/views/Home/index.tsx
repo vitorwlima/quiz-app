@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 
 import { Container, InputWrapper } from './styles'
 import { Button, Input, Select } from '../../components'
+import { categoryOptions, difficultyOptions } from '../../constants'
 
 export const Home = () => {
   const history = useHistory()
@@ -10,32 +11,6 @@ export const Home = () => {
   const [questionsNumber, setQuestionsNumber] = useState(10)
   const [selectedCategory, setSelectedCategory] = useState('any')
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
-
-  const categoryOptions = [
-    {
-      value: 'any',
-      text: 'Any Category',
-    },
-    {
-      value: '9',
-      text: 'General Knowledge',
-    },
-  ]
-
-  const difficultyOptions = [
-    {
-      value: 'easy',
-      text: 'Easy',
-    },
-    {
-      value: 'medium',
-      text: 'Medium',
-    },
-    {
-      value: 'hard',
-      text: 'Hard',
-    },
-  ]
 
   const handleStartQuiz = () => {
     history.push(

@@ -7,6 +7,11 @@ export const Container = styled.div`
   }
 
   margin: 20px 40px;
+
+  @media (min-width: 1024px) {
+    max-width: 960px;
+    margin: 20px auto;
+  }
 `
 
 export const InputWrapper = styled.div``

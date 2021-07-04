@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactNode } from 'react'
-import { IAnswers } from '../../interfaces/IAnswers'
+import { IAnswers } from '../../interfaces'
 import { Container } from './styles'
 
 interface AlternativeCardProps {

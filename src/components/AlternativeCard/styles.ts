@@ -1,5 +1,5 @@
 import styled, { FlattenSimpleInterpolation, css } from 'styled-components'
-import { IAnswers } from '../../interfaces/IAnswers'
+import { IAnswers } from '../../interfaces'
 
 interface ContainerProps {
   optionSelected: IAnswers
