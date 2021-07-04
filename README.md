@@ -1,14 +1,16 @@
 # This project is a quiz app
 
+## Live access
 Access through here: https://quiz-app-olive-ten.vercel.app/
-Quiz application built with react and typescript mobile-first, perfectly adaptable for all screen sizes. The questions used are pulled from the Open Trivia API according to the user setup on the first screen of the application.
+Quiz application built with react and typescript mobile-first, perfectly adaptable for all screen sizes.
+
+## Technologies used
+The questions used are pulled from the Open Trivia API according to the user setup on the first screen of the application.
 It uses styled-components for the UI, polished for colors, and axios for API requests.
 
 ![image](https://user-images.githubusercontent.com/82615423/124372932-a485bb00-dc64-11eb-9aab-c9872f6714e9.png)
 ![image](https://user-images.githubusercontent.com/82615423/124372945-bc5d3f00-dc64-11eb-8aae-67604a07e754.png)
 ![image](https://user-images.githubusercontent.com/82615423/124372986-0b0ad900-dc65-11eb-98bc-268c0b303b66.png)
-
-
 
 # Getting Started with Create React App
 
