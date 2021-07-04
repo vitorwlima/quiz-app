@@ -9,7 +9,7 @@ import {
   FinalContainer,
   QuestionContainer,
 } from './styles'
-import { AlternativeCard, Button } from '../../components'
+import { AlternativeCard, Button, Loader } from '../../components'
 
 interface IParams {
   amount: string
@@ -91,7 +91,7 @@ export const Quiz = () => {
   }
 
   if (questions.length < 1) {
-    return <div>Carregando...</div>
+    return <Loader />
   }
 
   return (
