@@ -1,12 +1,15 @@
-import styled from 'styled-components'
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
+interface ContainerProps {
+  error?: boolean
+}
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  div {
+  .loader {
     animation: rotateLoading 1s infinite;
     border: 8px solid #ccc;
     border-top: 8px solid #209ff3;
@@ -20,4 +23,21 @@ export const Container = styled.div`
       transform: rotate(360deg);
     }
   }
+
+  ${(props): false | FlattenSimpleInterpolation =>
+    !!props.error &&
+    css`
+      & {
+        .loader {
+          display: none;
+        }
+
+        .error {
+          p {
+            text-align: center;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    `}
 `

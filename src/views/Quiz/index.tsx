@@ -22,6 +22,8 @@ export const Quiz = () => {
   const history = useHistory()
   const he = require('he')
 
+  const [error, setError] = useState(false)
+
   const [questions, setQuestions] = useState<IQuestions[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<IAnswers[][]>([])
@@ -38,7 +40,12 @@ export const Quiz = () => {
           ? `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`
           : `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`
       const response = await api.get(url)
-      setQuestions(response.data.results)
+
+      if (response.data.response_code === 0) {
+        return setQuestions(response.data.results)
+      }
+
+      setError(true)
     }
     getData()
   }, [amount, category, difficulty])
@@ -91,7 +98,7 @@ export const Quiz = () => {
   }
 
   if (questions.length < 1) {
-    return <Loader />
+    return <Loader error={error} />
   }
 
   return (
