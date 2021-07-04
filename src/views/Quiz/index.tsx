@@ -128,9 +128,9 @@ export const Quiz = () => {
       {currentQuestion > questions.length - 1 && (
         <FinalContainer>
           <h2>
-            Você acertou {score} / {questions.length}!
+            You got {score} / {questions.length}!
           </h2>
-          <Button onClick={handleReturnHome}>Voltar para a tela inicial</Button>
+          <Button onClick={handleReturnHome}>Go back to home screen</Button>
         </FinalContainer>
       )}
     </Container>
