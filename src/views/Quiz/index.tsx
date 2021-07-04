@@ -128,7 +128,7 @@ export const Quiz = () => {
               ))}
           </AlternativesContainer>
           {selectedAnswer.alternative && (
-            <Button onClick={handleNextQuestion}>Próxima pergunta</Button>
+            <Button onClick={handleNextQuestion}>Next question</Button>
           )}
         </QuestionContainer>
       ))}
