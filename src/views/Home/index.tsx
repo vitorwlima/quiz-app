@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-import { Container, InputWrapper } from './styles'
+import { useHistory } from 'react-router-dom'
 
+import { Container, InputWrapper } from './styles'
 import { Button, Input, Select } from '../../components'
 
 export const Home = () => {
+  const history = useHistory()
+
   const [questionsNumber, setQuestionsNumber] = useState(10)
   const [selectedCategory, setSelectedCategory] = useState('any')
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
@@ -34,7 +37,11 @@ export const Home = () => {
     },
   ]
 
-  const handleStartQuiz = () => {}
+  const handleStartQuiz = () => {
+    history.push(
+      `/quiz/${questionsNumber}/${selectedCategory}/${selectedDifficulty}`
+    )
+  }
 
   return (
     <Container>

@@ -4,12 +4,15 @@ import { Container } from './styles'
 interface ButtonProps {
   children: ReactNode
   onClick: React.MouseEventHandler<HTMLButtonElement>
+  disabled?: boolean
 }
 
-export const Button = ({ onClick, children }: ButtonProps) => {
+export const Button = ({ onClick, children, disabled }: ButtonProps) => {
   return (
     <Container>
-      <button onClick={onClick}>{children}</button>
+      <button onClick={onClick} disabled={disabled}>
+        {children}
+      </button>
     </Container>
   )
 }
