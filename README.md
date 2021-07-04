@@ -1,3 +1,8 @@
+# This project is a quiz app
+
+It was created in one day as an attempt to teach my sister programming, and it turned into a really nice application. It was built with CRA, using typescript for the code, styled components for the style, and axios for the api request.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
