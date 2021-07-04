@@ -2,6 +2,8 @@
 
 ## Live access
 Access through here: https://quiz-app-olive-ten.vercel.app/
+
+## Intro
 Quiz application built with react and typescript mobile-first, perfectly adaptable for all screen sizes.
 
 ## Technologies used
